@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Happy 17th Birthday Gudiya! 🥰💗</title>
+  
+  <!-- Google Fonts: Quicksand, Fredoka, Caveat, Pacifico -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&family=Pacifico&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+</head>
+<body>
+
+  <!-- Background Animated Sky & Ambient Stars -->
+  <div class="sky-background">
+    <div class="stars-container" id="starsContainer"></div>
+    <div class="floating-clouds">
+      <div class="cloud cloud-1"></div>
+      <div class="cloud cloud-2"></div>
+      <div class="cloud cloud-3"></div>
+    </div>
+  </div>
+
+  <!-- Audio Controls Floating Top Right -->
+  <div class="audio-control-bar">
+    <button id="musicToggleBtn" class="audio-btn" title="Toggle Birthday Melody" aria-label="Toggle Birthday Melody">
+      <span class="music-icon" id="musicIcon">🎵</span>
+      <span class="music-text" id="musicText">Play Music</span>
+      <span class="music-waves" id="musicWaves">
+        <span></span><span></span><span></span>
+      </span>
+    </button>
+  </div>
+
+  <!-- Confetti Canvas -->
+  <canvas id="confettiCanvas"></canvas>
+
+  <!-- ==============================================
+       STAGE 1: THE GIFT UNBOXING SURPRISE INTRO
+       ============================================== -->
+  <div class="intro-screen" id="introScreen">
+    <div class="intro-content">
+      <div class="intro-badge">✨ A Special Surprise From Your Bhaiyyu ✨</div>
+      
+      <div class="gift-box-wrapper" id="giftBoxBtn" role="button" tabindex="0" title="Tap to open your surprise!">
+        <div class="gift-box">
+          <div class="gift-lid">
+            <div class="gift-ribbon-bow">
+              <div class="bow-loop left"></div>
+              <div class="bow-loop right"></div>
+              <div class="bow-center"></div>
+            </div>
+            <div class="lid-stripe"></div>
+          </div>
+          <div class="gift-body">
+            <div class="gift-vertical-ribbon"></div>
+            <div class="gift-tag">To: Gudiya 💖</div>
+          </div>
+        </div>
+        <div class="box-glow"></div>
+      </div>
+
+      <h2 class="intro-title">A Special Delivery for Gudiya! 🎁</h2>
+      <p class="intro-sub">Bhaiyyu has put together something special for your 17th...</p>
+      <button class="open-surprise-btn" id="openSurpriseBtn">
+        <span>Tap to Unwrap Your Birthday Surprise ✨</span>
+      </button>
+      <p class="intro-hint">🔊 Turn your volume on for the music box melody!</p>
+    </div>
+  </div>
+
+  <!-- ==============================================
+       STAGE 2: MAIN BIRTHDAY SHOWCASE
+       ============================================== -->
+  <main class="main-container" id="mainContainer">
+
+    <!-- HERO SECTION -->
+    <header class="hero-section">
+      <div class="badge-pill">
+        <span class="sparkle-icon">✨</span> CHAPTER 17 UNLOCKED • SWEET SEVENTEEN <span class="sparkle-icon">👑</span>
+      </div>
+
+      <h1 class="main-title">
+        <span class="title-sub">To my dearest little sister...</span>
+        <span class="title-highlight">Happy 17th Birthday Gudiya🥰💗</span>
+      </h1>
+
+      <p class="hero-subtext">
+        From crossing paths on Reddit last year to meeting in person — you have become the little sister I will always protect, cherish, and stand by forever.
+      </p>
+    </header>
+
+    <!-- ==============================================
+         UPGRADED INTERACTIVE 17TH BIRTHDAY CAKE
+         ============================================== -->
+    <section class="cake-section">
+      <div class="section-header">
+        <div class="badge-pill">🎂 TIME TO CELEBRATE ✨</div>
+        <h2 class="section-title">The 17th Birthday Cake</h2>
+        <p class="section-subtitle">Make your quiet wish from your heart and blow the candles!</p>
+      </div>
+
+      <div class="cake-display-card">
+        <div class="cake-container" id="cakeContainer">
+          
+          <!-- Golden Rim Plate -->
+          <div class="cake-pedestal">
+            <div class="pedestal-top"></div>
+            <div class="pedestal-base"></div>
+          </div>
+
+          <!-- Tier 3: Bottom Grand Tier -->
+          <div class="cake-tier tier-bottom">
+            <div class="tier-frosting-top"></div>
+            <div class="cake-lace"></div>
+            <div class="cake-decorations">
+              <span class="cake-pearl">🌸</span>
+              <span class="cake-flower">💮</span>
+              <span class="cake-pearl">🌸</span>
+              <span class="cake-flower">💮</span>
+              <span class="cake-pearl">🌸</span>
+            </div>
+          </div>
+
+          <!-- Tier 2: Middle Delicate Tier -->
+          <div class="cake-tier tier-middle">
+            <div class="tier-frosting-top"></div>
+            <div class="frosting-drips">
+              <span class="drip drip-1"></span>
+              <span class="drip drip-2"></span>
+              <span class="drip drip-3"></span>
+              <span class="drip drip-4"></span>
+              <span class="drip drip-5"></span>
+            </div>
+            <div class="cake-decorations middle-decor">
+              <span>🌸</span><span>✨</span><span>🌸</span>
+            </div>
+          </div>
+
+          <!-- Tier 1: Top Birthday Tier with 17 Candles -->
+          <div class="cake-tier tier-top">
+            <div class="tier-frosting-top"></div>
+            
+            <!-- Number 17 Glowing Candle Topper -->
+            <div class="candles-wrapper" id="candlesWrapper">
+              
+              <!-- Candle 1 -->
+              <div class="candle candle-one">
+                <div class="flame-glow"></div>
+                <div class="flame" id="flame1"></div>
+                <div class="wick"></div>
+                <div class="candle-digit">1</div>
+              </div>
+
+              <!-- Candle 7 -->
+              <div class="candle candle-seven">
+                <div class="flame-glow"></div>
+                <div class="flame" id="flame2"></div>
+                <div class="wick"></div>
+                <div class="candle-digit">7</div>
+              </div>
+
+              <!-- Mini sparkler side candles -->
+              <div class="sparkler-candle sc-left">
+                <div class="flame mini-flame"></div>
+                <div class="sparkler-stem"></div>
+              </div>
+              <div class="sparkler-candle sc-right">
+                <div class="flame mini-flame"></div>
+                <div class="sparkler-stem"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Blow Candles Interaction Button -->
+        <div class="cake-actions">
+          <button class="blow-candle-btn" id="blowCandleBtn">
+            <span class="btn-icon">💨</span>
+            <span class="btn-text">Make a Wish & Blow Candles!</span>
+          </button>
+          
+          <div class="wish-reveal-box" id="wishRevealBox">
+            <div class="wish-message">
+              🎉 <strong>YAYYY!! HAPPY 17TH BIRTHDAY GUDIYA!</strong> 🥳✨<br>
+              Your wish has been dispatched straight to the universe! May this 17th chapter bring you peace, high achievements, beautiful smiles, and zero stress! 💖
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SPECIAL PHOTOGRAPH MEMORY FRAME
+         ============================================== -->
+    <section class="photo-section">
+      <div class="section-header">
+        <div class="badge-pill">📸 A MEMORY TO CHERISH 🌸</div>
+        <h2 class="section-title">That Special Day We Met</h2>
+        <p class="section-subtitle">Met once in person, but bonded as brother and sister for life!</p>
+      </div>
+
+      <div class="photo-frame-wrapper">
+        <div class="polaroid-photo-card" id="polaroidCard">
+          <div class="polaroid-tape"></div>
+          
+          <div class="photo-container" id="photoContainer">
+            <!-- Automatically loads photo.jpg, photo.png, or photo.jpeg from project folder -->
+            <img id="sisterPhoto" src="photo.jpg" alt="Our Special Memory" />
+            
+            <div class="photo-placeholder" id="photoPlaceholder">
+              <div class="placeholder-icon">📸</div>
+              <p class="placeholder-title">Our Memory Photo</p>
+              <p class="placeholder-sub">Put your picture in this folder named <code>photo.jpg</code> (or <code>photo.png</code>)<br>and upload it to GitHub so your sis can see it!</p>
+            </div>
+          </div>
+
+          <div class="photo-caption-box">
+            <p class="photo-caption-text">"Some bonds aren't by blood, they are written in the stars." ✨</p>
+            <label for="photoUploadInput" class="upload-photo-btn" title="Upload a picture of our meeting">
+              <span>🖼️ Upload / Change Photo</span>
+              <input type="file" id="photoUploadInput" accept="image/*" />
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         BHAIYYU'S TWO SPECIAL WISHES
+         ============================================== -->
+    <section class="wishes-section">
+      <div class="section-header">
+        <div class="badge-pill">🤞 BHAIYYU'S HEARTFELT BLESSINGS 🌸</div>
+        <h2 class="section-title">✨ My Two Wishes For You</h2>
+        <p class="section-subtitle">Straight from your brother's heart on your 17th milestone:</p>
+      </div>
+
+      <div class="wishes-grid">
+        
+        <!-- Wish Card 1 -->
+        <div class="wish-card wish-card-1">
+          <div class="wish-card-glow"></div>
+          <div class="wish-icon-box">🌟</div>
+          <div class="wish-tag">WISH #1</div>
+          <blockquote class="wish-quote">
+            "Gudiya, I really hope and ik you will achieve all your dreams🤞"
+          </blockquote>
+          <div class="wish-footer-badge">
+            <span>Bhaiya's Wish 🤞</span>
+          </div>
+        </div>
+
+        <!-- Wish Card 2 -->
+        <div class="wish-card wish-card-2">
+          <div class="wish-card-glow"></div>
+          <div class="wish-icon-box">💖</div>
+          <div class="wish-tag">WISH #2</div>
+          <blockquote class="wish-quote">
+            "Gudiya, dekhna tumko pakka ek bahut accha, loving, understanding, and caring partner milega🤞"
+          </blockquote>
+          <div class="wish-footer-badge">
+            <span>Always Praying For You 🤍</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         BHAIYYU'S PERSONAL EMOTIONAL LETTER
+         ============================================== -->
+    <section class="letter-section">
+      <div class="letter-card">
+        <div class="letter-wax-seal">
+          <span>💌</span>
+        </div>
+        <div class="letter-header">
+          <span class="letter-date">A Personal Letter From Bhaiyyu • Turning 17</span>
+          <h2 class="letter-salutation">Dear Gudiya,</h2>
+        </div>
+        <div class="letter-body">
+          
+          <!-- Exact personal note from Bhaiya -->
+          <div class="bhaiya-special-note-box">
+            <div class="note-quote-mark">“</div>
+            <p class="note-hindi-text">
+              Gudiya, aaj tumhara 17th birthday he, ik I'm door hu bahut, but Gudiya, hamesha yaad rakhna ki koi ho ya na ho, tumhare bhaiyyu hamesha tumhare saath, tumhare liye milenge tumko. So kabhi bhi kuch bhi ho to bhaiya ko bolna. Aur aaj mast enjoy krna din bhar, kisi bhi baat ka stress nhi lena. Aur gudiya apni health ka tabiyat ka dhyaan rakhna.
+            </p>
+            <div class="note-closing-line">
+              Once again <strong>Happpppppppppyyyy Birthdayyyyyyyyyy Gudiyaaaaa 😆💗</strong>
+            </div>
+          </div>
+
+          <div class="letter-extra-words">
+            <p>
+              Even though we connected on Reddit just last year and have met in person only once, you became family to me in every sense of the word. Distance doesn't change that.
+            </p>
+          </div>
+
+          <div class="letter-signature">
+            <span>With all my love & blessings,</span><br>
+            <strong class="sig-name">Your Bhaiyyu ❤️</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         AMAZON GIFT VOUCHER SCRATCH CARD SURPRISE
+         ============================================== -->
+    <section class="gift-scratch-section" id="giftVoucherSection">
+      <div class="section-header">
+        <div class="badge-pill">🎁 SPECIAL BIRTHDAY SURPRISE FROM BHAIYA 🛍️</div>
+        <h2 class="section-title">✨ Gudiya's Birthday Gift Voucher</h2>
+        <p class="section-subtitle">Use your finger or mouse to scratch the gold card & unwrap your gift!</p>
+      </div>
+
+      <div class="scratch-card-wrapper">
+        <div class="scratch-card-container" id="scratchContainer">
+          
+          <!-- Underneath: The Amazon Gift Voucher -->
+          <div class="voucher-card-inner">
+            <div class="amazon-card-header">
+              <div class="amazon-brand">
+                <span class="amazon-logo-text">amazon</span>
+                <span class="amazon-gift-badge">Gift Card</span>
+              </div>
+              <div class="voucher-birthday-badge">🎂 Sweet 17 Special</div>
+            </div>
+
+            <div class="voucher-card-body">
+              <div class="voucher-illustration">
+                <span class="voucher-flower-accent">🌸 ✦ 🎁 ✦ 🌸</span>
+              </div>
+              <p class="voucher-for">Specially gifted to: <strong>Gudiya (My Little Sister) 💖</strong></p>
+              <p class="voucher-message">"Treat yourself to whatever your heart desires — cute stationery, books, clothes, or treats! Bhaiya's treat!"</p>
+
+              <!-- ========================================================
+                   👇 PASTE YOUR REAL AMAZON GIFT VOUCHER CODE BELOW 👇
+                   Replace "AMZN-GUDIYA-17BDAY-2026" with your actual voucher code!
+                   ======================================================== -->
+              <div class="voucher-code-box">
+                <div class="code-label">YOUR VOUCHER CODE:</div>
+                <div class="code-value" id="voucherCodeText">6XMD-PY3BG6-F936</div>
+                <button class="copy-code-btn" id="copyCodeBtn" title="Copy code to clipboard">
+                  📋 Copy Code
+                </button>
+              </div>
+
+              <div class="voucher-actions">
+                <a href="https://www.amazon.in/claim" target="_blank" rel="noopener noreferrer" class="redeem-amazon-btn">
+                  🛒 Redeem on Amazon App / Website ↗
+                </a>
+              </div>
+            </div>
+            
+            <div class="voucher-footer">
+              <span>Valid with endless love from Bhaiya ❤️ • No Expiry</span>
+            </div>
+          </div>
+
+          <!-- The Scratch Canvas Overlay (Covers the card until scratched) -->
+          <canvas id="scratchCanvas" class="scratch-canvas"></canvas>
+
+        </div>
+
+        <!-- Quick Reveal Helper Button -->
+        <div class="scratch-helper">
+          <button id="quickRevealBtn" class="scratch-reveal-btn">
+            ✨ Tap here if you want to reveal instantly
+          </button>
+          <p class="scratch-status" id="scratchStatus">Scratch above to reveal! 👆</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         INTERACTIVE HUG & BLESSING COUNTER
+         ============================================== -->
+    <section class="hug-meter-section">
+      <div class="hug-meter-card">
+        <h3>Bhaiyyu's Hug & Blessing Counter</h3>
+        <p>A little reminder that your brother is always sending you warmth across the distance!</p>
+        
+        <div class="counter-display">
+          <span class="counter-number" id="hugCounter">17</span>
+          <span class="counter-label">Hugs & Blessings Loaded!</span>
+        </div>
+
+        <button class="send-hug-btn" id="sendHugBtn">
+          <span class="hug-btn-icon">🌸</span> Send Another Warm Hug! <span class="hug-btn-icon">✨</span>
+        </button>
+
+        <div class="hug-floating-popups" id="hugPopups"></div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p class="footer-quote">"Family isn't always about blood; it's about who chose to stay in your corner forever."</p>
+      <p class="footer-credit">Created with all my heart by Bhaiyyu for <strong>Gudiya</strong> 🥰💗</p>
+      <div class="footer-actions">
+        <button id="retriggerConfettiBtn" class="footer-btn">🎊 Replay Confetti Cannon</button>
+        <button id="backToTopBtn" class="footer-btn">⬆️ Back to Top</button>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="photoData.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
